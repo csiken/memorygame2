@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	background: rgb(30%, 50%, 15%);
+	font-family: sans-serif;
+	transition: .6s;
+}
+
+#winScreen {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	transition: background .4s;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#winScreen p {
+	color: white;
+	font-size: 60px;
+	transform: translateY(-70vh);
+	user-select: none;
+	text-shadow: 2px 2px 0 black;
+	animation: textDrop 2s;
+}
+
+#intro{
+	width: 20%;
+	text-align: center;
+	margin: 10px auto 0 auto;
+	border: 1px solid black;
+	border-radius: 50px;
+	background: linear-gradient(rgba(20%, 70%, 50%, .2), rgba(20%, 70%, 50%, .3));
+	box-shadow: 2px 2px 1px black;
+}
+
+
+#play-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tile {
+	height: 81px;
+	width: 100px;
+	margin: 20px;
+	border: 1px solid;
+	background: linear-gradient(rgba(255, 0, 0, .6), brown);
+	cursor: pointer;
+}
+
+.tile p {
+	font-size: 30px;
+	margin: 0;
+	padding: 35%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: blur(20px);
+	user-select: none;
+}
+
+.matched {
+	border-radius: 50%;
+	transition: 1s;
+	background: white;
+}
+
+
+@keyframes textDrop {
+	0% {
+		transform: translateY(-70vh);
+	}
+	10% {
+		transform: translateY(-12vh);
+	}
+	90% {
+		transform: translateY(12vh);
+	}
+	100% {
+		transform: translateY(110vh);
+	}
+}
